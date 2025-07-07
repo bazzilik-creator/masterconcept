@@ -1,0 +1,178 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f8;
+    background-image: none;
+    font-size: 16px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header {
+    background-color: #002f5f;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    float: left;
+    margin-left: 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #ffcc00;
+    color: #002f5f;
+    outline: none;
+}
+
+#hero {
+    background: url(bilili/laptop.jpg) no-repeat center center/cover;
+    color: white;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4);
+    margin-bottom: 40px;
+}
+
+#hero .container {
+    width: 100%;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+#hero p {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+section {
+    padding: 50px 20px;
+    background-color: white;
+    color: #222;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h2 {
+    margin-bottom: 25px;
+    color: #002f5f;
+    font-size: 2rem;
+    font-weight: 700;
+    border-bottom: 3px solid #ffcc00;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+ul li {
+    margin-bottom: 12px;
+}
+
+footer {
+    background-color: #002f5f;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    margin-top: 60px;
+}
+
+/* Clear floats */
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1, nav {
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    #hero h2 {
+        font-size: 2rem;
+    }
+    #hero p {
+        font-size: 1.2rem;
+    }
+    section {
+        padding: 30px 15px;
+    }
+}

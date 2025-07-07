@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Web Development - Master Concept</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* Simple slide-in animation */
+        .slide-in {
+            animation: slideIn 1.5s ease forwards;
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Responsive Web Development</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="container slide-in">
+        <h2>Seamless Experience Across All Devices</h2>
+        <p>Our responsive web development ensures your website looks great and functions perfectly on desktops, tablets, and smartphones.</p>
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1350&q=80" alt="Responsive Web Development" />
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Master Concept. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
